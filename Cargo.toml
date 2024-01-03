@@ -1,0 +1,37 @@
+[package]
+name = "silverfox-rust"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+sea-orm = {version = "0.12.10",features = [
+    "debug-print",
+    "runtime-tokio-native-tls",
+    "sqlx-postgres",
+    "sqlx-mysql",
+] }
+tokio = { version = "1.35.1", features = ["full"] }
+axum = "0.7.3"
+tower = "0.4.13"
+tower-http = { version = "0.5.0", features = ["cors", "fs"] }
+tower-cookies = "0.10.0"
+anyhow = "1.0.75"
+dotenvy = "0.15.7"
+serde = "1.0.193"
+serde_json = "1.0.108"
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
+reqwest = "0.11.22"
+http = "1.0.0"
+log = "0.4.20"
+nacos-sdk = { version = "0.3", features = ["default"] }
+clap = { version = "4.4.11", features = ["derive"] }
+hf-hub = "0.3.2"
+image = "0.24.7"
+imageproc = "0.23.0"
+[rust]
+debug = true
+debuginfo-level = 2
+[workspace]
